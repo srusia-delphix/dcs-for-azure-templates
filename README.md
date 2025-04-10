@@ -42,7 +42,7 @@ provided [docker-compose.yaml](docker-compose.yaml) file to build release artifa
 `docker-compose -f docker-compose.yaml up`
 
 If you're unable to install Docker on your machine, you can manually create artifacts for any of the templates in this
-repository, in any number of ways. In all of the following examples, the directory you for each pipeline is
+repository, in any number of ways. In all the following examples, the directory you for each pipeline is
 `<template_dir>`:
 * On Windows:
   * Leverage the file explorer for these purposes:
@@ -60,7 +60,7 @@ Once you have created a template, you can import the template into your data fac
 * Select `Pipeline`, then `Import from pipeline template`
   * This will open a file explorer window, you can select the recently built template from the `releases` folder or
     wherever it exists.
-* After selecting the appropriate template, you will be asked to to select the linked services for various steps in the
+* After selecting the appropriate template, you will be asked to select the linked services for various steps in the
 pipeline.
 * Each template will be different, please refer to the `README.md` file in the template's folder to familiarize yourself
 with the linked services that should be selected.
@@ -263,7 +263,7 @@ where the value in the key column is exactly equal to `KEY_1`, `K2` will mask al
 ends with `2`, `K3` will mask all rows where the value in the key column starts with `KEY_3`, and `default` will mask
 all rows that are not equal to `KEY_1` and that don't end with `2` and that don't start with `KEY_3`.
 
-Note that the alias names must be unique per table. Further,there can be only one key column defined in each table.
+Note that the alias names must be unique per table. Further, there can be only one key column defined in each table.
 Should you need to use multiple key columns in the same table, this is only supported by referring to the additional key
 columns in the conditions of the primary key column. Let's suppose we want to add a secondary key column,
 `secondary_row_type`. To do this, in the definitions of the conditions for `row_type` (our primary key column), we would
@@ -503,7 +503,7 @@ and `mv *.zip releases/."`.
 
 If Metadata store scripts are needed to support your new templates or new features, please update the
 `metadata_store_scripts` directory to include those changes, and update the `README.md` for all impacted templates to
-incidate the need for the new DB version. New statements should play nicely with previous statements - isolate the
+indicate the need for the new DB version. New statements should play nicely with previous statements - isolate the
 changes in a particular versioned script, and follow the version naming convention. Versioned scripts follow the naming
 convention `V<version_number>__<comment>.sql`, where `<version_number>` is `YYYY.MM.DD.#` and represents the date when
 this script is added (with the final digit being used to allow multiple versions to be tagged with the same date).
